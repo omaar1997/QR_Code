@@ -67,7 +67,7 @@ class _MyAppState extends State<MyApp> {
   // }
 
   void checkQR() {
-    if (_scanBarcode == "https://github.com/deskbtm/android-adb-wlan") {
+    if (_scanBarcode == "https://www.youtube.com/") {
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (_) => VideoScreen()));
     }
@@ -78,7 +78,7 @@ class _MyAppState extends State<MyApp> {
     final Uri toLaunch = Uri.parse(_scanBarcode);
     return MaterialApp(
         home: Scaffold(
-            appBar: AppBar(title: Center(child: const Text('Barcode scan'))),
+            appBar: AppBar(title: Center(child: const Text('QR-Code scan'))),
             body: Builder(builder: (BuildContext context) {
               return Container(
                   alignment: Alignment.center,
@@ -95,7 +95,7 @@ class _MyAppState extends State<MyApp> {
                         ElevatedButton(
                             onPressed: () => {
                                   if (_scanBarcode ==
-                                      "https://github.com/deskbtm/android-adb-wlan")
+                                      "https://www.youtube.com/")
                                     {
                                       Navigator.of(context).push(
                                           MaterialPageRoute(
